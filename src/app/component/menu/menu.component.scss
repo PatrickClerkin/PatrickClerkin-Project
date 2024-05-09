@@ -1,0 +1,46 @@
+ion-header {
+  ion-toolbar {
+    --background: #1976d2; /* header background color */
+    --color: #fff; /* header text color */
+  }
+}
+
+ion-content {
+  background-color: #f4f4f4; /* content background color */
+
+  ion-segment-button {
+    --color: #1976d2; /* segment button text color */
+    --color-checked: #fff; /* selected segment button text color */
+    --background: #fff; /* segment button background color */
+    --background-checked: #1976d2; /* selected segment button background color */
+  }
+
+  ion-list {
+    ion-item {
+      ion-thumbnail {
+        border-radius: 50%; /* make thumbnails circular */
+        border: 2px solid #1976d2; /* thumbnail border color */
+      }
+
+      ion-label {
+        h2 {
+          color: #333; /* item name color */
+        }
+        p {
+          color: #666; /* item description and price color */
+        }
+      }
+
+      ion-button {
+        --background: #1976d2; /* button background color */
+        --color: #fff; /* button text color */
+        margin-right: 10px; /* add margin between buttons */
+      }
+    }
+  }
+
+  ion-pagination {
+    --color: #1976d2; /* pagination text color */
+    --background: #fff; /* pagination background color */
+  }
+}

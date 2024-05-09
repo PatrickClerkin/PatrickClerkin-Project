@@ -1,0 +1,15 @@
+/* Styling for ion-card */
+ion-card {
+  margin: 20px; /* Adds margin around the card */
+  background-color: #f9f9f9; /* Sets a light background color */
+  border-radius: 10px; /* Rounds the corners of the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+}
+
+/* Styling for ion-button */
+ion-button {
+  margin-top: 20px; /* Adds top margin to the button */
+  --background: #3880ff; /* Sets the primary color for button background */
+  --color: #fff; /* Sets the text color for the button */
+  --border-radius: 10px; /* Rounds the corners of the button */
+}

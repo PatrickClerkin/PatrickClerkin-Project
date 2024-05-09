@@ -1,0 +1,35 @@
+/* styling for the about-us section */
+.about-us {
+  background-color: #f8f9fa; /* light gray background color */
+  border-radius: 10px; /* rounded corners */
+  padding: 20px; /* padding inside the section */
+  margin-top: 20px; /* margin at the top of the section */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* box shadow for a subtle elevation effect */
+}
+
+/* styling for the heading within the about-us section */
+.about-us h2 {
+  color: #343a40; /* dark gray color for the heading text */
+  font-size: 28px; /* larger font size for the heading */
+  margin-bottom: 15px; /* margin at the bottom of the heading */
+}
+
+/* styling for paragraphs within the about-us section */
+.about-us p {
+  color: #6c757d; /* gray color for paragraph text */
+  font-size: 18px; /* font size for paragraphs */
+  line-height: 1.6; /* line height for better readability */
+  margin-bottom: 15px; /* margin at the bottom of paragraphs */
+}
+
+/* styling for links within the about-us section */
+.about-us a {
+  color: #007bff; /* blue color for links */
+  text-decoration: none; /* remove underline from links */
+  transition: color 0.3s ease; /* smooth transition for link color */
+}
+
+/* hover styling for links within the about-us section */
+.about-us a:hover {
+  color: #0056b3; /* darker blue color on hover */
+}

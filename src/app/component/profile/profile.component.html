@@ -1,0 +1,45 @@
+<!-- Header section -->
+<ion-header>
+    <!-- Toolbar with primary color -->
+    <ion-toolbar color="primary">
+        <!-- Title of the page -->
+        <ion-title>Profile</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<!-- Main content section -->
+<ion-content>
+    <!-- User profile card -->
+    <ion-card>
+        <!-- Card header -->
+        <ion-card-header>
+            <!-- Title for user profile -->
+            <ion-card-title>User Profile</ion-card-title>
+        </ion-card-header>
+        <!-- Card content -->
+        <ion-card-content>
+            <!-- User email -->
+            <ion-item>
+                <ion-label>Email:</ion-label>
+                <ion-label>{{ user.email }}</ion-label>
+            </ion-item>
+            <!-- User name -->
+            <ion-item>
+                <ion-label>Name:</ion-label>
+                <ion-label>{{ user.name }}</ion-label>
+            </ion-item>
+            <!-- User age -->
+            <ion-item>
+                <ion-label>Age:</ion-label>
+                <ion-label>{{ user.age }}</ion-label>
+            </ion-item>
+            <!-- User address -->
+            <ion-item>
+                <ion-label>Address:</ion-label>
+                <ion-label>{{ user.address.street }}, {{ user.address.city }}, {{ user.address.state }}, {{ user.address.country }}, {{ user.address.postalCode }}</ion-label>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+    <!-- Logout button -->
+    <ion-button expand="block" color="danger" (click)="logout()">Logout</ion-button>
+</ion-content>

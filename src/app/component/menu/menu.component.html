@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>menu</ion-title> <!-- title of the page -->
+    <ion-searchbar (ionChange)="filterItems($event.target.value)"></ion-searchbar> <!-- search bar -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment [(ngModel)]="selectedCategory">
+    <ion-segment-button value="all">
+      all <!-- option to display all categories -->
+    </ion-segment-button>
+    <ion-segment-button *ngFor="let category of categories" [value]="category">
+      {{ category }} <!-- dynamic category options -->
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-list>
+    <!-- iterate through filtered menu items -->
+    <ion-item *ngFor="let item of filteredMenuItems">
+      <ion-thumbnail slot="start">
+        <img [src]="item.imageUrl" alt="{{ item.name }}"> <!-- display item image -->
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ item.name }}</h2> <!-- display item name -->
+        <p>{{ item.description }}</p> <!-- display item description -->
+        <p>price: ${{ item.price }}</p> <!-- display item price -->
+        <ion-button (click)="addToCart(item)">add to cart</ion-button> <!-- add to cart button -->
+        <ion-button (click)="viewDetails(item)">view details</ion-button> <!-- view details button -->
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- pagination -->
+  <ion-pagination [(ngModel)]="currentPage" (ionChange)="changePage($event)"></ion-pagination>
+</ion-content>

@@ -1,0 +1,93 @@
+<ion-header>
+  <!-- header section -->
+  <ion-toolbar color="primary">
+    <!-- toolbar with primary color -->
+    <ion-title>Welcome to Food and Drinks App</ion-title>
+    <!-- title of the app -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- content section -->
+  <div class="banner" [@fadeIn]="true">
+    <!-- animated welcome banner -->
+    <img src="assets/images/welcome-banner.jpg" alt="Welcome Banner">
+    <!-- image for the welcome banner -->
+  </div>
+
+  <div class="welcome-message ion-padding">
+    <!-- welcome message section -->
+    <ion-card color="light" [@slideInRight]="true">
+      <!-- card with light background color and slide-in animation -->
+      <ion-card-header>
+        <!-- header of the card -->
+        <ion-card-title>Welcome!</ion-card-title>
+        <!-- title of the card -->
+      </ion-card-header>
+      <ion-card-content>
+        <!-- content of the card -->
+        <p>Explore our menu, place your order, and enjoy delicious food and drinks.</p>
+        <!-- text content -->
+        <p>Don't miss out on our special offers!</p>
+        <!-- additional text content -->
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="featured-items ion-padding">
+    <!-- featured items section -->
+    <ion-slides [options]="slideOpts">
+      <!-- slider or carousel showcasing featured menu items -->
+      <ion-slide *ngFor="let item of featuredItems">
+        <!-- individual slide for each featured menu item -->
+        <ion-card>
+          <!-- card to display each menu item -->
+          <img [src]="item.imageUrl" [alt]="item.name">
+          <!-- image of the menu item -->
+          <ion-card-header>
+            <!-- header of the card -->
+            <ion-card-title>{{ item.name }}</ion-card-title>
+            <!-- title of the menu item -->
+          </ion-card-header>
+          <ion-card-content>
+            <!-- content of the card -->
+            <p>{{ item.description }}</p>
+            <!-- description of the menu item -->
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="action-buttons ion-padding">
+    <!-- action buttons section -->
+    <ion-grid>
+      <!-- Grid layout for action buttons -->
+      <ion-row>
+        <!-- row within the grid -->
+        <ion-col size="12" size-md="6">
+          <!-- column for the first button -->
+          <ion-button expand="block" color="primary" routerLink="/menu" class="button-hover">View Menu</ion-button>
+          <!-- button used to view the menu -->
+        </ion-col>
+        <ion-col size="12" size-md="6">
+          <!-- this isused for the second button-->
+          <ion-button expand="block" color="secondary" routerLink="/order" class="button-hover">Place Order</ion-button>
+          <!-- button used to place an order -->
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="about-us ion-padding">
+    <!-- about us section -->
+    <h2>About Us</h2>
+    <!-- heading -->
+    <p>We are dedicated to providing the best dining experience with our carefully crafted menu and excellent service.</p>
+    <!-- Text content -->
+    <p>Contact us at: example@example.com</p>
+    <!-- contact information -->
+    <p>Follow us on <a href="https://twitter.com/foodanddrinks" target="_blank">Twitter</a> and <a href="https://www.instagram.com/foodanddrinks/" target="_blank">Instagram</a> for updates!</p>
+    <!--social media linkls -->
+  </div>
+</ion-content>

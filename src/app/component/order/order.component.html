@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- displaying the list of items in the cart -->
+  <ion-list>
+    <!-- iterating over each item in the cart -->
+    <ion-item *ngFor="let item of cartItems">
+      <!-- displaying item thumbnail -->
+      <ion-thumbnail slot="start">
+        <img [src]="item.imageUrl" alt="{{ item.name }}">
+      </ion-thumbnail>
+      <ion-label>
+        <!-- item name -->
+        <h2>{{ item.name }}</h2>
+        <!-- item description -->
+        <p>{{ item.description }}</p>
+        <!-- item price -->
+        <p>Price: ${{ item.price }}</p>
+      </ion-label>
+      <!-- button to remove item from the cart -->
+      <ion-button slot="end" color="danger" (click)="removeItem(item)">Remove</ion-button>
+    </ion-item>
+  </ion-list>
+  <!-- divider -->
+  <ion-item-divider></ion-item-divider>
+  <!-- total price of the items in the cart -->
+  <ion-item>
+    <ion-label>Total:</ion-label>
+    <ion-label>{{ calculateTotal() }}</ion-label>
+  </ion-item>
+  <!-- button to proceed to checkout -->
+  <ion-button expand="block" color="primary" (click)="checkout()">Checkout</ion-button>
+</ion-content>
